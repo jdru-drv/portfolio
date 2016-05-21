@@ -1,0 +1,175 @@
+/*Color for the navbar*/
+.navbar-default, .navbar-toggle{
+	background-image: linear-gradient(to bottom, #06073A 0, #290AFF 100%);
+	
+}
+/*modifying active class in navbar*/
+.navbar-default .navbar-nav > .active > a{
+	background-image: linear-gradient(to bottom, #290AFF 0, #06073A 100%);
+	color: #FFFFFF;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	padding: 0 15%;
+}
+.navbar-default .navbar-nav > .active > a:hover{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.navbar-default .navbar-nav > .active > a{
+	
+	color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a{
+	font-size: x-large;
+	color: #FFFFFF;
+	padding-left: 30%;
+	padding-right: 30%;
+	text-shadow: 2px 2px 2px #000;
+}
+.navbar-default .navbar-nav > li > a:hover{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+/*change or erase this once you do something about the logo*/
+.navbar-default .navbar-brand{
+	color: #FFFFFF;
+}
+.navbar-default .navbar-brand:hover{
+	color: #FFFFFF;
+}
+.navbar-brand > img{
+	display: inline-block;
+	height:60px;
+	position: relative;
+	bottom: 100%;
+	left: 70%;
+}
+.navbar{
+	min-height: 62px;
+	padding-top: 0.5%;
+}
+.header{
+	background-image: url('../img/collage.jpg');
+	opacity: 0.5;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	color: #FFFFFF;
+	height: 15rem;
+	margin-top: -20px;
+}
+/*remove this once website is ready*/
+#construction{
+	position: absolute;
+	top: 25%;
+}
+#construction img{
+	width: 23vw;
+	margin: auto 40%;
+}
+/*h1{
+	position: relative;
+	top: 70px;
+	padding: 0px 20%;
+	text-shadow: 0px 0px 8px #000000;
+	font-size: 1.6rem;
+	opacity: 1;
+}*/
+body{
+	/*background-color: #333333;*/
+	background-color: #2525A2;
+}
+.content{
+	text-align: center;
+	background-color: #DEDEC6;/*RGBA(27, 14, 245, 0.53);*/
+}
+
+.content > h2, .intro{
+	padding: 2%;
+	text-align: center;
+}
+.intro{
+	background-color: #FFFFFF;
+}
+.feature{
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+}
+.well{
+	margin-top: 1%;
+	border: 5px groove RGBA(255, 252, 0, 0.64);/*RGBA(0, 255, 147, 0.51);*/
+	border-radius: 10px;
+	width: 50%;
+	height: 40%;
+	display: inline-block;
+}
+.img-circle{
+	border:1px solid #000000;
+	width: 100px;
+	height: 100px;
+}
+.intro p{
+	margin: 4%;
+	font-size: 2.5rem;
+}
+section{
+	display: inline-block;
+	width: 100%;
+}
+footer{
+	background-color: #333;
+	color: #BBBBBB;
+	margin: 0px;
+}
+footer> div{
+	text-align:center;
+	background-color: inherit;
+}
+footer>div>p{
+	padding: 5px;
+	margin: 0;
+}
+.well a{
+	color: #333;
+}
+@media screen and (min-width:768px){
+	h1{
+		top: 0;
+		text-shadow: none;
+		font-size: 3.6rem;
+	}
+	.intro p{
+
+	}
+	.navbar{
+		position: absolute;
+		width: 98.8vw;
+		top: 10%;
+		z-index: 1;
+		background-image: none;
+		background-color: rgba(255,255,255,.3);
+		border-left: none;
+		border-right: none;
+	}
+	.navbar-brand > img{
+		bottom: 110%;
+	}
+	.navbar-nav{
+		display: inline-flex;
+	}
+	.header{
+		height: 100vh;
+	}
+	.navbar-default .navbar-nav > .active > a{
+		border-radius: 10%;
+	}
+	.feature{
+		width:45%;
+		display: inline-block;
+	}
+	.feature .imagen{
+		width: 100%;
+	}
+}

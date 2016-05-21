@@ -45,3 +45,35 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.jpg
+*.png
+personalSite/js/npm.js
+personalSite/js/bootstrap.min.js
+personalSite/js/bootstrap.js
+personalSite/jobs.html
+personalSite/interests.html
+*.gif
+personalSite/img/cevaz01.jpeg
+personalSite/education.html
+personalSite/css/font-awesome.min.css
+*.map
+personalSite/css/font-awesome.css
+personalSite/css/bootstrap.min.css
+personalSite/css/bootstrap.css
+personalSite/css/bootstrap-theme.min.css
+personalSite/css/bootstrap-theme.css
+personalSite/about.html
+*.svg
+mockup/script/slideshow.js
+mockup/script/jquery.imagesloaded.js
+mockup/script/jquery.easing.1.3.js
+mockup/css/slideshow.css
+*.otf
+mockup/css/jcarousel.basic.css
+*.woff2
+fonts/fontawesome-webfont.woff
+*.ttf
+fonts/fontawesome-webfont.eot
+angular.min.js
+css/font-awesome.min.css
+css/font-awesome.css

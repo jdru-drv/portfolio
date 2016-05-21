@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="Jose David Ramirez">
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Font awesome -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+	<title>JD Web Developer</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header id="home">
+		<div class="container-fluid">
+			<nav>
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="glyphicon glyphicon-menu-hamburger"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#home" class="anim-scroll">Home<span class="sr-only">(current)</span></a></li>
+						<li><a href="#portfolio" class="anim-scroll">Portfolio<span class="sr-only">(portfolio)</span></a></li>
+						<li><img src="img/intro.png" /></li>
+						<li><a href="#about" class="anim-scroll">About<span class="sr-only">(about)</span></a></li>
+						<li><a href="#contact" class="anim-scroll">Contact<span class="sr-only">(contact)</span></a></li>
+					</ul>
+				</div>
+				</div>
+			</nav>
+			<div class="row">
+				<div class="col-md-1 aside"></div>
+				<div class="col-md-10 intro">
+					<h1 class="text-center">From Venezuela, in Ecuador and Developing for the World.</h1>
+				</div>
+				<div class="col-md-1 aside"></div>
+			</div>
+		</div>
+	</header>
+	<section id="portfolio">
+		<div class="container-fluid">
+			<div class="row">
+				<h2 class="text-center">Portfolio</h2>
+			</div>
+			<div class="row" ng-init="
+				works=[{
+						id:'work-1',
+						name:'Tribute page',
+						pic:'img/tribute-mod.png',
+						caption:'Tribute page exercise developed in FreeCodeCamp.com',
+						objective:'Create a tribute page about a famous person. Task from FreeCodeCamp.',
+						year:'2016',
+						summary:'A static website about Elon Musk. It shows who he is, there is information about his family as well as some of his achievements. Also, there is a link in case visitors would like to get more information.',
+						status:'Completed',
+						skills:'Html5, Css3, Bootstrap',
+						link:'/tribute/'
+						},{
+						id:'work-2',
+						name:'Web Portfolio',
+						pic:'img/portfolio-mod.png',
+						caption:'Web portfolio.',
+						objective:'Build a web portfolio so user can appreciate what the owner can create.',
+						year:'2016',
+						summary:'A complete web portfolio made of one webpage, with parallax effect and animated scrolling. There is also a spyscroll on the navigation bar.',
+						status:'Completed',
+						skills:'Html5, Css3, Javascript, Bootstrap, Jquery, AngularJs',
+						link:''
+						},{
+						id:'work-3',
+						name:'Personal site',
+						pic:'img/mySite-mod.png',
+						caption:'Personal site, currently under construction.',
+						objective:'Build a complete website about the authors personal life.',
+						year:'2016',
+						summary:'A complete website about the author. It contains information about himself such as education, hobbies, work experience and life in general.',
+						status:'In progress',
+						skills:'Html5, Css3, Javascript, Bootstrap',
+						link:'/personalSite/'
+						},{
+						id:'work-4',
+						name:'Mockup Page',
+						pic:'img/mockup-mod.png',
+						caption:'Mockup page made from scratch based on a template.',
+						objective:'Build a landing page from scratch based on a template.',
+						year:'2016',
+						summary:'A landing page based on a template a friend provided (the author is unknown). The site was made completed from scratch, no libraries were used except for one external plugin for the image slider.',
+						status:'Completed',
+						skills:'Html5, Css3, external plugin in jQuery',
+						link:'/mockup/'
+						},{
+						id:'work-5',
+						name:'Random quotes',
+						pic:'img/quotes-mod.png',
+						caption:'A random quotes generator with tweeting option.',
+						objective:'Build a random quote generator with the option of tweeting such quotes.',
+						year:'2016',
+						summary:'A one-page website, which will generate quotes and it also contains a tweet button which will give the user the posibility of tweeting the generated quote.',
+						status:'Completed',
+						skills:'Html5, Css3, Javascript, Bootstrap, Ajax, JSON API, jQuery',
+						link:'/quotes/'
+						}]">
+				<div class="col-md-4" ng-repeat="work in works">
+					<figure>
+						<img ng-src={{work.pic}} class="img-responsive img-thumbnail work" data-toggle="modal" data-target="{{ '#' + work.id }}" />
+						<figcaption>{{work.caption}}</figcaption>
+					</figure>
+					<div class="modal fade" id={{work.id}} role="dialog">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">{{work.name}}</h4>
+								</div>
+								<div class="modal-body">
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-md-7">
+												<img src={{work.pic}} class="img-responsive img-thumbnail"/>
+											</div>
+											<div class="col-md-5">
+												<p></p>
+												<label>Objective:</label>
+												<p>{{work.objective}}</p>
+												<label>Year:</label>
+												<p>{{work.year}}</p>
+												<label>Summary:</label>
+												<p>{{work.summary}}</p>
+												<label>Status:</label>
+												<p>{{work.status}}</p>
+												<label>Skills used:</label>
+												<p>{{work.skills}}</p>
+												<a ng-href={{work.link}} target="_blank" class="btn btn-success">Visit site</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<h2 class="text-center">J.D. Ramírez</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<img src="img/me.png" class="img-responsive img-circle" />
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-7">
+					<h3 class="text-center">Facts</h3>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-4">
+								<label>
+									Real Name:
+								</label>
+								<p>José David Ramírez</p>
+							</div>
+							<div class="col-sm-4">
+								<label>
+									Nickame:
+								</label>
+								<p>J.D.</p>
+							</div>
+							<div class="col-sm-4">
+								<label>
+									Nationality:
+								</label>
+								<p>Venezuelan</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4">
+								<label>
+									Base of Operations:
+								</label>
+								<p>Ecuador</p>
+							</div>
+							<div class="col-sm-4">
+								<label>
+									Occupation:
+								</label>
+								<p>
+									ESL/EFL Teacher - Web Developer - Translator
+								</p>
+							</div>
+							<div class="col-sm-4">
+								<label>
+									Hobbies:
+								</label>
+								<p>Piano, guitar, cooking, videogames, swimming</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="text-center">Story</h3>
+					<p>J.D. was born and raised in Cabimas, Venezuela. He studied at <a href="www.urbe.edu" target="_blank">URBE</a> where he got his degree in Computer engineering and his Master's in Educational IT. Even though his mother language is Spanish, he has taught English since 2008. In addition, he has worked as a translator and real time interpreter with different companies. Due to the situation in his home country, he moved to Ecuador where he works as a freelance web developer.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contact">
+		<div class="container-fluid">
+			<div class="row">
+				<h2 class="text-center">Contact</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-6 text-center">
+					<h3>Social networks</h3>
+					<a href="https://www.facebook.com/j.ramirezu" target="_blank"><img src="img/Facebook.png" class="social-icons" onmouseover="this.src='img/facebook-hover.png'" onmouseleave="this.src='img/Facebook.png'"></a>
+					<a href="https://twitter.com/JD_Ramirez_U" target="_blank"><img src="img/Twitter.png" class="social-icons" onmouseover="this.src='img/twitter-hover.png'" onmouseleave="this.src='img/Twitter.png'"></a>
+					<a href="https://www.instagram.com/jd_ramirez_u/" target="_blank"><img src="img/Instagram.png" class="social-icons" onmouseover="this.src='img/instagram-hover.png'" onmouseleave="this.src='img/Instagram.png'"></a>
+					<a href="https://www.linkedin.com/in/jose-david-ramirez-9a395b68" target="_blank"><img src="img/LinkedIn.png" class="social-icons" onmouseover="this.src='img/linkedin-hover.png'" onmouseleave="this.src='img/LinkedIn.png'"></a>
+					<a href="https://plus.google.com/+JDRamirezU" target="_blank"><img src="img/google.png" class="social-icons" onmouseover="this.src='img/google-hover.png'" onmouseleave="this.src='img/google.png'"></a>
+				</div>
+				<div class="col-md-6 text-center">
+					<h3>E-mail</h3>
+					<a href="mailto:j.d.ramirez.u@gmail.com" style="color: #FFF; font-size: 1.2em;"><i class="fa fa-envelope" aria-hidden="true"></i> j.d.ramirez.u@gmail.com</a>
+				</div>
+			</div>
+			<div class="row">
+				<p class="text-center" style="font-size: 1.3em; border-top: 1px solid #FFF; margin-top: 1%;">Site developed by J.D. Ramirez</p>
+			</div>
+		</div>
+	</section>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+			actClass();
+			scroll('.anim-scroll', 1000);
+
+    		//motion on scrolling
+			function scroll( _selector, _speed ){
+				_speed = parseInt(_speed, 10) === _speed ? _speed : 300;
+				$( _selector ).on('click', function(event){
+					event.preventDefault();
+					var url = $(this).attr('href'); //cache the url.
+					$('.navbar-nav li.active').removeClass('active');
+	 				$(this).parent().addClass('active');
+					// Animate the jump
+					$("html, body").animate({ 
+						scrollTop: parseInt( $(url).offset().top ) - 50
+					}, _speed);
+	 			});
+			}
+			//scrollSpy on navbar
+			$(window).on('scroll',actClass);
+
+			function actClass(){
+				//actualPos = $(window).scrollTop();
+				var actualPos = $(window).scrollTop();
+				var porta = $("#portfolio").position().top - 60;
+				var acerca = $("#about").position().top -60;
+				if (actualPos < porta){
+					$('.navbar-nav li.active').removeClass('active');
+	 				$("a[href='#home']").parent().addClass('active');
+				} 
+				if (actualPos >= porta){
+					$('.navbar-nav li.active').removeClass('active');
+	 				$("a[href='#portfolio']").parent().addClass('active');
+				}
+				if (actualPos >= acerca) {
+					$('.navbar-nav li.active').removeClass('active');
+	 				$("a[href='#about']").parent().addClass('active');	
+				}
+				if (actualPos >= (acerca + acerca/5)) {
+					$('.navbar-nav li.active').removeClass('active');
+	 				$("a[href='#contact']").parent().addClass('active');
+				}
+
+			}
+			//there is a .work to be used in the imgs for the figcaption fade effect
+			$(".work").hover(function(){
+				$(this).next().css("visibility","visible");
+			},function(){
+				$(this).next().css("visibility","hidden");
+			});
+		});
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.well{
+  width:60%;
+  margin:auto;
+  background-color:#5BC0B4;
+  color:#FFF;
+  border: 5px outset #C3C3C3;
+  border-radius:10px;
+  box-shadow: 0 -2px 2px #333;
+}
+h1{
+  color:#FFF;
+  text-shadow: 2px -2px 4px #5BC0B4;
+  text-decoration: underline;
+  font-family:lobster;
+}
+.buttons{
+  position: relative;
+  margin-left:69%;
+  margin-top:1%;
+}
+body{
+  background-image:linear-gradient(rgba(225,225,225,1),rgba(225,225,225,0.7));
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+.btn-info, .btn-danger{
+  box-shadow:2px -2px 4px #333
+}
