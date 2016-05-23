@@ -253,30 +253,24 @@
     <script type="text/javascript">
     	$(document).ready(function(){
 			actClass();
-			scroll('.anim-scroll', 1000);
-
-    		//motion on scrolling
-			function scroll( _selector, _speed ){
-				_speed = parseInt(_speed, 10) === _speed ? _speed : 300;
-				$( _selector ).on('click', function(event){
-					event.preventDefault();
-					var url = $(this).attr('href'); //cache the url.
-					$('.navbar-nav li.active').removeClass('active');
-	 				$(this).parent().addClass('active');
-					// Animate the jump
-					$("html, body").animate({ 
-						scrollTop: parseInt( $(url).offset().top ) - 50
-					}, _speed);
-	 			});
-			}
+			
+			$(".anim-scroll").on("click",function(event){
+				event.preventDefault();
+	 			var url = $(this).attr('href');
+				$('.navbar-nav li.active').removeClass('active');
+	 			$(this).parent().addClass('active');
+	 			$("html, body").animate({ 
+					scrollTop: $(url).offset().top - 50
+				}, 1000);
+			});
 			//scrollSpy on navbar
 			$(window).on('scroll',actClass);
 
 			function actClass(){
 				//actualPos = $(window).scrollTop();
 				var actualPos = $(window).scrollTop();
-				var porta = $("#portfolio").position().top - 60;
-				var acerca = $("#about").position().top -60;
+				var porta = $("#portfolio").position().top - 50;
+				var acerca = $("#about").position().top -50;
 				if (actualPos < porta){
 					$('.navbar-nav li.active').removeClass('active');
 	 				$("a[href='#home']").parent().addClass('active');
